@@ -10,15 +10,21 @@
     </head>
     <body>
 
-        <div id="answer">
-            REPONSE
+        <div class="start">
+            <button onclick="answer()" type="button" name="button">COMMENCER</button>
         </div>
 
         <div class="input_field">
             <input type="text" name="input" value="" id="input">
             <button onclick="answSubmit()" type="button" name="button">Submit</button>
+            <div class="vies">
+                essais restants : <span id="lives"></span>
+            </div>
         </div>
 
-        <button onclick="answer()" type="button" name="button">COMMENCER</button>
+        <div id="answer">
+            
+        </div>
+
     </body>
 </html>
