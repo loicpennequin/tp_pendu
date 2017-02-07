@@ -1,0 +1,15 @@
+#answer {
+  border: solid black 1px;
+  text-align: center;
+  font-size: 3rem;
+  height: 4rem; }
+
+.input_field {
+  margin-top: 30px;
+  border: solid black 1px;
+  padding: 10px; }
+
+#input {
+  width: 30px; }
+
+/*# sourceMappingURL=style.css.map */
