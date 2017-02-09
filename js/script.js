@@ -1,3 +1,13 @@
+//à ajouter :
+//_update la réponse en cas de saisie correcte
+//_message de victoire quand toutes les lettres sont trouvées
+//_impossibilité de continuer en cas de défaite
+//_rendre ça joli et cool et djeuns avec des neons à la fast and furious
+//_ajouter des chats quelque part
+
+
+
+
 //INITIALISATION
 var lives = 6;
 var mesMots = ["salade","tomate","oignon", "kebab", "sushi", "nutella", "pomme",
@@ -27,5 +37,12 @@ var answSubmit = function() {
     };
     if (randArr.indexOf(input) != -1) {
         alert("lettre correcte");
+    }
+    else{
+        lives= lives-1;
+        document.getElementById("lives").innerHTML = lives;
+        if (lives <= 0) {
+            alert("Eeeeeet voilà t'as perdu. T'es nul.");
+        };
     };
 };
