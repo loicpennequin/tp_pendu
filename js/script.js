@@ -8,7 +8,7 @@
 //INITIALISATION
 var lives = 6;
 var mesMots = ["salade","tomate","oignon", "kebab", "sushi", "nutella", "pomme",
- "hamburger", "patate", "glucose",]; //mots possibles
+ "hamburger", "patate", "glucose","sodomisent"]; //mots possibles
 var random = mesMots[Math.floor(Math.random() * mesMots.length)]; //mots au hasard
 var randArr = random.split(""); //transformation en array de lettres
 var  blankChar = []; //affichage de la reponse sous forme de caracteres masqués
@@ -40,7 +40,11 @@ var answSubmit = function() {
                 blankChar[index] = input;
             }
             document.getElementById("answer").innerHTML = blankChar.join("");
-        });
+        })
+        if (blankChar.indexOf("_ ") == -1) {
+            alert("tu as gagné au pendu, tu fais partie des cool kids maintenant")
+        }
+
 
     }
     else{
