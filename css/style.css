@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   height: 100%;
-  background: linear-gradient(#444444, #993344); }
+  background: linear-gradient(#aaaaaa, #993344); }
 
 #start {
   width: 25%;
@@ -41,12 +41,15 @@ html, body {
   transform: translateX(-100%);
   transition: all 1s;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.5), transparent); }
   #input_field button {
     background-color: #993344;
     color: black;
     font-size: 1.5rem;
     border: none; }
+
+.vie {
+  display: none; }
 
 #input {
   width: 30px;
@@ -62,7 +65,8 @@ html, body {
   opacity: 0;
   transition: all 1s;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  border: solid rgba(255, 255, 255, 0.5) 3px; }
   #guy #erreur10 {
     background-color: #993344;
     position: absolute;
@@ -71,6 +75,7 @@ html, body {
     width: 50px;
     height: 3px;
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur9 {
     background-color: #993344;
@@ -80,6 +85,7 @@ html, body {
     width: 3px;
     height: 250px;
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur8 {
     background-color: #993344;
@@ -89,6 +95,7 @@ html, body {
     height: 3px;
     width: 100px;
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur7 {
     background-color: #993344;
@@ -109,6 +116,7 @@ html, body {
     height: 50px;
     border-radius: 50%;
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur5 {
     background-color: #993344;
@@ -118,6 +126,7 @@ html, body {
     width: 3px;
     height: 75px;
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur4 {
     background-color: #993344;
@@ -128,6 +137,7 @@ html, body {
     height: 3px;
     transform: rotate(45DEG);
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur3 {
     background-color: #993344;
@@ -140,6 +150,7 @@ html, body {
     height: 3px;
     transform: rotate(135DEG);
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur2 {
     background-color: #993344;
@@ -150,6 +161,7 @@ html, body {
     height: 3px;
     transform: rotate(45DEG);
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
   #guy #erreur1 {
     background-color: #993344;
@@ -162,6 +174,7 @@ html, body {
     height: 3px;
     transform: rotate(135DEG);
     opacity: 0;
+    transition: all 0.5s;
     z-index: 2; }
 
 #lost {

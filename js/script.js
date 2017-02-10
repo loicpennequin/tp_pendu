@@ -1,8 +1,5 @@
 //à ajouter :
 //_impossibilité de continuer en cas de défaite
-//_rendre ça joli et cool et djeuns avec des neons à la fast and furious
-//_ajouter des chats quelque part
-
 
 //INITIALISATION
 var lives = 11;
@@ -21,7 +18,7 @@ var answer = function() {
         document.getElementById('answer').style.transform = 'none';
         document.getElementById('guy').style.opacity = '1';
     }, 800);
-    document.getElementById("start").style.transform="none";
+    document.getElementById("start").setAttribute("style", "transform : none; opacity : 0");
     document.getElementById("buttonStart").style.boxShadow = "0 0 5px 5px #993344";
     randArr.forEach(function(value, index) {
         blankChar[index] = "_ "
@@ -52,6 +49,14 @@ var answSubmit = function() {
     else{
         if (lives == 1) { //si je place ce if à la fin du else ET que je spécifie lives ==0, ça ne marche pas. WHY
             document.getElementById("lost").style.display="block";
+            document.getElementById("guy").style.transform="scale(1.8,1.8) translateY(5%)";
+            var test = document.getElementsByClassName('byebye');
+            for (var i = 0; i < test.length; i++) {
+                test[i].style.display="none";
+}
+            for (let i=1 ; i<=10 ; i++ ) {
+                document.getElementById("erreur" + i).style.display="none";
+            };
         };
         lives= lives-1;
         document.getElementById("lives").innerHTML = lives;

@@ -1,5 +1,5 @@
 $color1: #993344
-$color2: #444444
+$color2: #aaaaaa
 
 html, body
     margin: 0
@@ -45,14 +45,15 @@ html, body
     transform: translateX(-100%)
     transition: all 1s
     text-align: center
-    background-color: rgba(0,0,0,0.5)
+    background: linear-gradient( to right, rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0))
     button
         background-color: $color1
         color: black
         font-size: 1.5rem
         border: none
 
-
+.vie
+    display: none
 
 #input
     width: 30px
@@ -71,6 +72,7 @@ html, body
     transition: all 1s
     position: relative
     z-index: 1
+    border: solid rgba(255,255,255,0.5) 3px
     #erreur10
         background-color: $color1
         position: absolute
@@ -79,6 +81,7 @@ html, body
         width: 50px
         height: 3px
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
     #erreur9
@@ -89,7 +92,9 @@ html, body
         width: 3px
         height: 250px
         opacity: 0
+        transition: all 0.5s
         z-index: 2
+
     #erreur8
         background-color: $color1
         position: absolute
@@ -98,7 +103,9 @@ html, body
         height: 3px
         width: 100px
         opacity: 0
+        transition: all 0.5s
         z-index: 2
+
     #erreur7
         background-color: $color1
         position: absolute
@@ -119,6 +126,7 @@ html, body
         height: 50px
         border-radius: 50%
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
     #erreur5
@@ -129,6 +137,7 @@ html, body
         width: 3px
         height: 75px
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
     #erreur4
@@ -140,6 +149,7 @@ html, body
         height: 3px
         transform: rotate(45DEG)
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
     #erreur3
@@ -153,6 +163,7 @@ html, body
         height: 3px
         transform: rotate(135DEG)
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
     #erreur2
@@ -164,6 +175,7 @@ html, body
         height: 3px
         transform: rotate(45DEG)
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
     #erreur1
@@ -177,6 +189,7 @@ html, body
         height: 3px
         transform: rotate(135DEG)
         opacity: 0
+        transition: all 0.5s
         z-index: 2
 
 #lost
