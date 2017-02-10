@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   height: 100%;
-  background: linear-gradient(#9999BB, #BBCCEE); }
+  background: linear-gradient(#444444, #993344); }
 
 #start {
   width: 25%;
@@ -14,15 +14,15 @@ html, body {
   transition: all 1s; }
   #start button {
     width: 100%;
-    color: #BBCCEE;
+    color: #993344;
     font-size: 2.4rem;
     font-weight: bold;
     font-family: Arial;
     text-shadow: 5px 5px rgba(0, 0, 0, 0.5), 0 0 3px black;
-    background-color: #BBCCEE;
+    background-color: #993344;
     border-radius: 10px;
-    border: solid 4px #BBCCEE;
-    box-shadow: 0 0 5px 5px #BBCCEE;
+    border: none;
+    box-shadow: 0 0 5px 100px #993344;
     cursor: pointer;
     transition: all 0.5s; }
     #start button:hover {
@@ -39,14 +39,20 @@ html, body {
   margin-top: 30px;
   padding: 10px;
   transform: translateX(-100%);
-  transition: all 0.5s;
-  text-align: center; }
-
-.vies {
-  display: none; }
+  transition: all 1s;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); }
+  #input_field button {
+    background-color: #993344;
+    color: black;
+    font-size: 1.5rem;
+    border: none; }
 
 #input {
-  width: 30px; }
+  width: 30px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem; }
 
 #guy {
   width: 350px;
@@ -54,11 +60,11 @@ html, body {
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: all 0.5s;
+  transition: all 1s;
   position: relative;
   z-index: 1; }
   #guy #erreur10 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     bottom: 15px;
     left: 50px;
@@ -67,7 +73,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur9 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     bottom: 15px;
     left: 75px;
@@ -76,7 +82,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur8 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 85px;
     left: 75px;
@@ -85,7 +91,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur7 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 85px;
     left: 175px;
@@ -94,7 +100,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur6 {
-    border: solid 3px #BBCCEE;
+    border: solid 3px #993344;
     position: absolute;
     top: 105px;
     left: 150px;
@@ -105,7 +111,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur5 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 155px;
     left: 175px;
@@ -114,7 +120,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur4 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 170px;
     left: 165px;
@@ -124,9 +130,9 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur3 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 170px;
     left: 135px;
@@ -136,7 +142,7 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur2 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 245px;
     left: 168px;
@@ -146,9 +152,9 @@ html, body {
     opacity: 0;
     z-index: 2; }
   #guy #erreur1 {
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
-    background-color: #BBCCEE;
+    background-color: #993344;
     position: absolute;
     top: 245px;
     left: 133px;

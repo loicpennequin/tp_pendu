@@ -22,6 +22,7 @@ var answer = function() {
         document.getElementById('guy').style.opacity = '1';
     }, 800);
     document.getElementById("start").style.transform="none";
+    document.getElementById("buttonStart").style.boxShadow = "0 0 5px 5px #993344";
     randArr.forEach(function(value, index) {
         blankChar[index] = "_ "
     });
@@ -34,13 +35,11 @@ var answer = function() {
 var answSubmit = function() {
     var input = document.getElementById("input").value;
     var inputLgt = input.length;
-    if ( inputLgt > 1 || input < 1 ) {
+    if ( inputLgt > 1 || inputLgt < 1 ) {
         alert("erreur : saisie incorrecte");
     };
     if (randArr.indexOf(input) != -1) {
-        console.log('lettre correcte');
         randArr.forEach(function(value,index) {
-            console.log(value, index);
             if (value == input) {
                 blankChar[index] = input;
             }
@@ -49,16 +48,13 @@ var answSubmit = function() {
         if (blankChar.indexOf("_ ") == -1) {
             alert("Tu as gagné au pendu, tu fais partie des cool kids maintenant")
         }
-
-
     }
     else{
-        if (lives == 1) {
+        if (lives == 1) { //si je place ce if à la fin du else ET que je spécifie lives ==0, ça ne marche pas. WHY
             document.getElementById("lost").style.display="block";
         };
         lives= lives-1;
         document.getElementById("lives").innerHTML = lives;
         document.getElementById("erreur" + lives).style.opacity= '1';
-
     };
 };
