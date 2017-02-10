@@ -1,14 +1,13 @@
 //à ajouter :
-//_message de victoire quand toutes les lettres sont trouvées
 //_impossibilité de continuer en cas de défaite
 //_rendre ça joli et cool et djeuns avec des neons à la fast and furious
 //_ajouter des chats quelque part
 
 
 //INITIALISATION
-var lives = 6;
+var lives = 11;
 var mesMots = ["salade","tomate","oignon", "kebab", "sushi", "nutella", "pomme",
- "hamburger", "patate", "glucose","sodomisent"]; //mots possibles
+ "hamburger", "patate", "glucose"]; //mots possibles
 var random = mesMots[Math.floor(Math.random() * mesMots.length)]; //mots au hasard
 var randArr = random.split(""); //transformation en array de lettres
 var  blankChar = []; //affichage de la reponse sous forme de caracteres masqués
@@ -16,7 +15,13 @@ var  blankChar = []; //affichage de la reponse sous forme de caracteres masqués
 
 // SELECTION D UN MOT AU HASARD ET TRANSFORMATION EN CARACTERES CACHES
 var answer = function() {
-    document.getElementById("lives").innerHTML = lives;
+    document.getElementById("lives").innerHTML = lives; //Affichage du nombre d'essais
+    setTimeout(function(){ //Affichage du champ input et du champ reponse
+        document.getElementById('input_field').style.transform = 'none';
+        document.getElementById('answer').style.transform = 'none';
+        document.getElementById('guy').style.opacity = '1';
+    }, 800);
+    document.getElementById("start").style.transform="none";
     randArr.forEach(function(value, index) {
         blankChar[index] = "_ "
     });
@@ -42,16 +47,18 @@ var answSubmit = function() {
             document.getElementById("answer").innerHTML = blankChar.join("");
         })
         if (blankChar.indexOf("_ ") == -1) {
-            alert("tu as gagné au pendu, tu fais partie des cool kids maintenant")
+            alert("Tu as gagné au pendu, tu fais partie des cool kids maintenant")
         }
 
 
     }
     else{
+        if (lives == 1) {
+            document.getElementById("lost").style.display="block";
+        };
         lives= lives-1;
         document.getElementById("lives").innerHTML = lives;
-        if (lives <= 0) {
-            alert("Eeeeeet voilà t'as perdu. Ta daronne elle boit du sprite sa mère.");
-        };
+        document.getElementById("erreur" + lives).style.opacity= '1';
+
     };
 };

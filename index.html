@@ -4,17 +4,18 @@
         <meta charset="utf-8">
         <title>Jeu de Pendu</title>
         <link rel="stylesheet" href="css/style.css">
+        <!--<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">-->
         <script type="text/javascript" src="js/script.js">
 
         </script>
     </head>
     <body>
 
-        <div class="start">
+        <div id="start">
             <button onclick="answer()" type="button" name="button">COMMENCER</button>
         </div>
 
-        <div class="input_field">
+        <div id="input_field">
             <input type="text" name="input" value="" id="input">
             <button onclick="answSubmit()" type="button" name="button">Submit</button>
             <div class="vies">
@@ -23,8 +24,28 @@
         </div>
 
         <div id="answer">
-            
+
         </div>
+
+        <section id="guy">
+            <div id="lost">
+                    <p>T'ES NUL </p>
+                    <p>MDR</p>
+            </div>
+            <div id="erreur10"></div>
+            <div id="erreur9"></div>
+            <div id="erreur8"></div>
+            <div id="erreur7"></div>
+            <div id="erreur6"></div>
+            <div id="erreur5"></div>
+            <div id="erreur4"></div>
+            <div id="erreur3"></div>
+            <div id="erreur2"></div>
+            <div id="erreur1"></div>
+
+        </section>
+
+
 
     </body>
 </html>
